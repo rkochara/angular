@@ -1,0 +1,32 @@
+<div class="container-fluid" ng-controller="sortController">
+  <div class="row row-content" >
+    <div class="col-xs-6 col-sm-4">
+      <select  ng-model="selectedDataType" ng-change="arrangeData(selectedDataType)" data-ng-options="dataType as dataType.name for dataType in dataTypes">
+        <option value="">Input Data Format</option>
+      </select>
+      <select  ng-model="selectedSortAlgo" ng-change="sortAlgo(selectedSortAlgo)" data-ng-options="algo as algo.name for algo in algos">
+        <option value="">Sorting Algorithm</option>
+      </select>
+      <br><br><br>
+      <svg ng-attr-width={{400}} ng-attr-height={{350}}  version="1.1" xmlns="http://www.w3.org/2000/svg" style="float:left">
+        <g ng-repeat="i in idArray(0,20)">
+          <rect id=rectId_{{i}} ng-attr-fill={{setColor(i)}} ng-attr-x={{20+i*10}} ng-attr-y={{300-i*15}} ng-attr-width={{10}} ng-attr-height={{25+i*15}} stroke="black" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="1" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="col-xs-6 col-sm-4">
+      <div >
+      <p> {{describeData}} </p>
+    </div>
+     <div ng-hide="!showSelSortCode">
+      <pre> <span style="font-style:italic; font-size=80%;"> {{describeSort}} </span> </pre>
+      <pre> <span style="color:red; font-style:italic; font-size=80%;"> {{describeI}} </span> <br> {{describeCodeI}} </pre>
+      <pre> <span style="color:blue; font-style:italic; font-size=80%;"> {{describeJ}} </span> <br> {{describeCodeJ}} </pre>
+      <pre> {{describeCodeMin}} <br> <span style="color:green; font-style:italic; font-size=80%;"> {{describeMin}} </span> </pre>
+      <pre> <span style="color:pink;  font-style:italic; font-size=80%;"> {{describeSwap}} </span> <br> {{describeCodeSwap}} </pre>
+    </div>
+    </div>
+  </div>
+</div>

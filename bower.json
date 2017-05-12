@@ -1,0 +1,30 @@
+{
+  "name": "dinakar-angular",
+  "authors": [
+    "Dinakar Kondru"
+  ],
+  "description": "first angular webApp",
+  "main": "index.html",
+  "keywords": [
+    "angular",
+    "htlm",
+    "webApp"
+  ],
+  "license": "MIT",
+  "homepage": "angularProj",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+    "angular-resource": "^1.5.5",
+    "angular-mocks": "^1.5.5",
+    "d3": "^3.5.17"
+  }
+}

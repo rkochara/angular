@@ -1,2 +1,0 @@
-# angular
-Single Page App

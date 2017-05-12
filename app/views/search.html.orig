@@ -1,0 +1,31 @@
+<div class="container-fluid" ng-controller="searchController" ng-keydown="keyPressedDown($event)" id="testdiv" tabindex="0" style="outline-width: 0;">
+
+  <div class="row row-content" >
+    <div id="divInst1" class="col-xs-4 col-sm-2">
+      <select  ng-model="selectedSearchAlgo" ng-change="searchAlgo(selectedSearchAlgo)" data-ng-options="algo as algo.name for algo in algos">
+        <option value="">Search Algorithm</option>
+      </select>
+      <br>
+      <br>
+      <label>
+        <input type="radio" ng-model="operation" value="insert" >
+        Insert
+      </label>
+      <br>
+      <label>
+        <input type="radio" ng-model="operation" value="delete" >
+        Delete
+      </label>
+      <br>
+      <label>
+        <input type="radio" ng-model="operation" value="search" >
+        Search
+      </label>
+      <br>
+    </div>
+    <div id="divInst2" class="col-xs-8 col-sm-6">
+      <svg id="svgInst" height="500" width="700" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      </svg>
+    </div>
+  </div>
+</div>
